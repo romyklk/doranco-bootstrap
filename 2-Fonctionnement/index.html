@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Fonctionnement de bootstrap</title>
+</head>
+<body>
+    <h1>1 - Les containers</h1>
+    <!--
+        Les containers sont des éléments qui permettent de définir la largeur de la page. Ils sont utilisés pour contenir les éléments de la page. Ils sont divisés en deux catégories : les containers à taille fixe et les containers à taille fluide.
+    -->
+
+    <div class="container" id="bloc1">
+        <p>
+            Mon premier container à taille fixe.
+        </p>
+    </div>
+
+    <div class="container-fluid" id="bloc2">
+        <p>
+            Mon deuxième container à taille fluide(pleine largeur).
+        </p>
+    </div>
+
+
+    <h1>2 - système de grille de Bootstrap</h1>
+
+    <!--
+        Le système de grille de Bootstrap permet de définir la disposition des éléments de la page. Il est composé de 12 colonnes. 
+    -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-6" id="colA">A</div>
+        <div class="col-4" id="colB">B</div>
+        <div class="col-2" id="colC">C</div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row mt-4">
+        <div class="col-2" id="colA">A</div>
+        <div class="col-4" id="colB">B</div>
+        <div class="col-5" id="colC">C</div>
+        <div class="col-1" id="colD">D</div>
+    </div>
+</div>
+
+<h1>
+    3 - Les Breakpoints
+</h1>
+<!--
+Les breakpoints sont des points de rupture qui permettent de définir la taille de l'écran à partir de laquelle les éléments de la page vont changer de disposition. Il existe 4 breakpoints : xs, sm, md ,xl et xxl.
+
+Lien doc : https://getbootstrap.com/docs/5.3/layout/breakpoints/
+sm : 576px
+md : 768px
+lg : 992px
+xl : 1200px
+xxl : 1400px
+-->
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-sm-5 col-md-6 col-lg-3" style="padding: 20px; background-color:aqua"></div>
+        <div class="col-12 col-sm-1 col-md-2 col-lg-3" style="padding: 20px; background-color:rgb(0, 4, 255)"></div>
+        <div class="col-12 col-sm-2 col-md-3 col-lg-3" style="padding: 20px; background-color:rgb(201, 16, 16)"></div>
+        <div class="col-12 col-sm-4 col-md-1 col-lg-3" style="padding: 20px; background-color:rgb(0, 255, 0)"></div>
+    </div>
+</div>
+
+<h1>
+    4 - Les couleurs
+</h1>
+<!--
+    Pour changer la couleur d'un texte, il suffit d'ajouter la classe text- suivi de la couleur souhaitée.
+    text-primary : bleu
+    text-secondary : gris
+    text-success : vert
+    text-danger : rouge
+    text-warning : orange
+    text-info : bleu clair
+    text-dark : noir
+-->
+<p class="text-primary">What is Lorem Ipsum?</p>
+<p class="text-secondary">What is Lorem Ipsum?</p>
+<p class="text-success">What is Lorem Ipsum?</p>
+<p class="text-danger">What is Lorem Ipsum?</p>
+<p class="text-warning">What is Lorem Ipsum?</p>
+<p class="text-info">What is Lorem Ipsum?</p>
+<p class="text-dark">What is Lorem Ipsum?</p>
+
+<div class="container">
+    <div class="row" style="margin: 20px;">
+        <div class="bg-success text-light"> Hello tout le monde</div>
+        <div class="bg-dark text-white">Bonjour</div>
+    </div>
+</div>
+
+<!--
+TP : 
+Réaliser une div avec 4 colonnes de couleur différente, contenant chacune un texte(1er élément, 2ème élément, 3ème élément, 4ème élément)
+-->
+<div class="container">
+    <div class="row">
+        <div class="col-3 bg-danger text-primary">Text 1</div>
+        <div class="col-3 bg-dark text-danger">Text 2</div>
+        <div class="col-3 bg-success text-light">Text 3</div>
+        <div class="col-3 bg-primary text-warning">Text 4</div>
+    </div>
+</div>
+
+<h1>
+    5 - Margin et padding
+</h1>
+<!--
+Pour appliquer un margin ou un padding, il suffit d'ajouter la classe m- suivi de la valeur du margin ou p- suivi de la valeur du padding.
+Les valeurs partent de 0 à 5.
+Vous pouvez utiliser :
+
+t : top
+b : bottom
+s : left
+e : right
+x : left et right
+y : top et bottom
+
+m ou t suivi de la position et de la valeur
+mt-1 : margin top 1
+-->
+
+<div class="container">
+    <div class="row">
+        <div class="col m-5 bg-success">Margin</div>
+    </div>
+    <div class="row">
+        <div class="col py-5 bg-danger">Padding</div>
+    </div>
+</div>
+
+<!--    
+Pour définir la largeur d'un élément, il suffit d'ajouter la classe w- suivi de la valeur de la largeur.
+Les valeurs partent de 25, 50, 75, 100 et auto.
+-->
+
+<div class="container">
+    <div class="bg-primary p-3 my-3 text-white w-25">
+        witdh 25%
+    </div>
+    <div class="bg-success py-3 my-3 text-white w-50">
+        witdh 50%
+    </div>
+    <div class="bg-info py-3 my-3 text-white w-75">
+        witdh 75%
+    </div>
+    <div class="bg-dark py-3 my-3 text-white w-100">
+        witdh 100%
+    </div>
+</div>
+<!--
+Pareil pour la hauteur avec la classe h- suivi de la valeur de la hauteur.
+
+<div class="container bg-warning" style="height: 100%;">
+<div class="bg-success h-25 w-50">Hauteur</div>
+</div>  
+-->
+<h1>
+    6 - Les textes
+</h1>
+
+<h4 class="bg-success text-white text-capitalize mx-5 py-3 text-center">
+    hello world
+</h4>
+
+<h4 class="bg-success text-white text-capitalize mx-5 py-3 text-lg-end text-md-center text-start">
+    Bonjour tout le monde
+</h4>
+
+<!--
+Pour changer la taille d'un texte, il suffit d'ajouter la classe fs- suivi de la valeur de la taille.Les valeurs partent de 1 à 6.
+
+https://getbootstrap.com/docs/5.3/content/typography/#global-settings
+
+Pour changer la taille d'un texte, il suffit d'ajouter la classe display- suivi de la valeur de la taille.Les valeurs partent de 1 à 6.
+
+lead : pour un texte plus gros que le texte normal
+-->
+<p class="fs-1">
+    Lorem ipsum dolor
+</p>
+<p class="display-1">
+    Lorem ipsum dolor
+</p>
+
+<p class="h1">
+    Cours de bootstrap
+</p>
+<p class="lead">
+    lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
+</p>
+<!--
+Pour gérer les liens , nous allons utiliser les classes text-decoration- suivi de la valeur de la décoration.
+Les valeurs sont :
+none : pas de décoration
+underline : souligné
+line-through : barré
+-->
+
+<a href="" class="text-decoration-none">Retour accueil</a>
+<a href="" class="text-decoration-line-through">Voir le profil</a>
+<a href="" class="text-decoration-underline">Se deconnecter</a>
+
+<!--
+Pour utilser font-weight, il suffit d'ajouter la classe fw- suivi de la valeur du font-weight.
+Les valeurs sont :
+normal : 400
+bold : 700
+bolder : 900
+lighter : 300
+light : 200
+-->
+
+<div>
+    <p>
+        Bonjour <span class="fw-bolder">Julien</span> vous êtes connecté	
+    </p>
+</div>
+
+<h1>
+    7 - Les bordures
+</h1>
+<!--
+    Lien utile : https://getbootstrap.com/docs/5.0/utilities/borders/
+
+    Pour appliquer une bordure, il suffit d'ajouter la classe border suivi de la valeur de la bordure.
+    On peut appliquer la border sur les 4 côtés ou sur un seul côté.
+    Les valeurs sont :
+    border : pour appliquer la bordure sur les 4 côtés
+    border-top : pour appliquer la bordure sur le haut
+    border-bottom : pour appliquer la bordure sur le bas
+    border-start : pour appliquer la bordure sur la gauche
+    border-end : pour appliquer la bordure sur la droite
+
+-->
+
+<div class="container">
+    <div class="row my-4 py-2"> 
+        <div class="col-3 border border-primary">Bleu</div>
+        <div class="col-3 border border-danger border-top-0">Rouge</div>
+        <div class="col-3 border border-success border-end-0">Vert</div>
+        <div class="col-3 border border-warning border-start-0">Orange</div>
+    </div>
+</div>
+
+<h1>
+    8 - Les boutons
+</h1>
+<!--    
+Pour créer un bouton, il suffit d'ajouter la classe btn suivi de la classe de la couleur du bouton.
+btn-outline- : pour un bouton avec une bordure
+
+On peut aussi arrondir les boutons avec la classe rounded- suivi de la valeur de l'arrondi.
+Les valeurs sont :
+rounded : pour arrondir les 4 coins
+rounded-top : pour arrondir le haut
+rounded-bottom : pour arrondir le bas
+rounded-start : pour arrondir la gauche
+rounded-end : pour arrondir la droite
+rounded-circle : pour arrondir en cercle
+rounded-pill : pour arrondir en forme de pilule
+
+-->
+<div class="container">
+    <a href="" class="btn btn-success rounded-pill">Se connecter</a>
+    <input type="submit" value="Se deconnecter" class="btn btn-warning">
+    <button class="btn btn-primary">Envoyer</button>
+    <button class="btn btn-outline-danger">Valider</button>
+</div>
+
+<h1>
+    9 - Les tableaux
+</h1>
+<!--
+Pour créer un tableau, il suffit d'ajouter la classe table suivi de la classe de la couleur du tableau.
+Les classes de couleurs sont :
+table-primary
+table-secondary
+table-success
+table-danger
+table-warning
+table-info
+table-light
+table-dark
+table-striped : pour ajouter des lignes alternées
+table-hover : pour ajouter un effet au survol de la souris
+table-bordered : pour ajouter des bordures
+border-success : pour ajouter une bordure verte
+text-center : pour centrer le texte
+Lien utile : https://getbootstrap.com/docs/5.3/content/tables/
+-->
+
+<div class="container">
+<table class="table mt-2 table-striped table-hover table-bordered border-success text-center">
+<caption>Liste des notes</caption>
+
+<thead class="table-primary">
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prénom</th>
+        <th scope="col">Note</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Julien</td>
+        <td>Leblanc</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Jean</td>
+        <td>LECLERC</td>
+        <td>17</td>
+    </tr>
+    <tr>
+        <td>Paul</td>
+        <td>LEFEBVRE</td>
+        <td>12</td>
+    </tr>
+</tbody>
+
+</table>
+</div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body, html {
+    height: 100%;
+}
+
+#bloc1{
+    background-color: #181717;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#bloc2{
+    background-color: #044135;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#colA{
+    background-color: #1c04d1;
+    color: white;
+}
+
+#colB{
+    background-color: #d10404;
+    color: white;
+}
+
+#colC{
+    background-color: #04d1d1;
+    color: white;
+}
+
+#colD{
+    background-color: #d1d104;
+    color: white;
+}
